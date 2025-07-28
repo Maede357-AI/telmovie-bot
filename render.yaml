@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: telmovie-bot
+    env: python
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python your_bot_file.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
